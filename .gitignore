@@ -1,1 +1,9 @@
 .idea
+/mvnw
+/mvnw.cmd
+/pom.xml
+/src/main/resources/com/example/programmers/hello-view.fxml
+/.mvn/wrapper/maven-wrapper.jar
+/.mvn/wrapper/maven-wrapper.properties
+/target/
+/.idea/
