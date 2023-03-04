@@ -20,8 +20,10 @@ public class Solution4 {
         int min = arr[0];
         int x = 0;          //최솟값 갖는 인덱스
         for(int i=0; i< arr.length; i++){
-            if(arr[i] < min) min = arr[i];
-            x = i;
+            if(arr[i] < min) {
+                min = arr[i];
+                x = i;
+            }
         }
         */
 
@@ -32,6 +34,7 @@ public class Solution4 {
         }
 
         list.remove(Collections.min(list));   //최솟값 삭제
+        //list.remove(x);
 
         int[] answer = new int[list.size()];
 
