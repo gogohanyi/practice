@@ -1,4 +1,4 @@
-package p0317;
+package p0322;
 
 public class Solution2 {
 

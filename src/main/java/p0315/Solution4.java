@@ -9,29 +9,13 @@ public class Solution4 {
     public int[] solution(int k, int[] score) {
         int[] answer = new int[score.length];
 
-        ArrayList<Integer>[] arr = new ArrayList[score.length];
+        ArrayList<Integer> arr = new ArrayList<>();
 
         for(int i=0; i< score.length; i++){
-            arr[i] = new ArrayList<Integer>();
-            for(int j=0; j<=i; j++){
-                arr[i].add(score[j]);
-            }
+            arr.add(score[i]);                              //ArrayList에 점수 추가
+            if(i >= k) arr.remove(Collections.min(arr));    //개수가 k를 넘어가면 list 최소값 삭제
+            answer[i] = Collections.min(arr);               //가장 작은 요소를 answer 배열에 저장
         }//for end
-
-        /*
-        for(int i=0; i<arr.length; i++){
-            for(int j=0; j<arr[i].size(); j++){
-                System.out.print(arr[i].get(j) + ", ");
-            }
-            System.out.println();
-        }//for end
-        */
-
-
-
-        for(int i=0; i<answer.length; i++){
-            answer[i] = Collections.min(arr[i]);
-        }
 
         return answer;
     }
