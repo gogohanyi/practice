@@ -1,5 +1,21 @@
 package p0322;
 
+import java.util.Arrays;
+
 public class Solution3 {
+
+    //최솟값 만들기
+    public int solution(int []A, int []B){
+        int answer = 0;
+
+        Arrays.sort(A);
+        Arrays.sort(B);
+
+        for(int i=0; i<A.length; i++){
+            answer += A[i] * B[B.length-i-1];
+        }//for end
+
+        return answer;
+    }
 
 }//class end
